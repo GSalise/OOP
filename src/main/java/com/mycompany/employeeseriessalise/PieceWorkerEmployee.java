@@ -87,13 +87,19 @@ public class PieceWorkerEmployee {
     
     
     public void displayHourlyEmployee(){
-        System.out.println("EMP ID: " + this.getEmpID());
-        System.out.println("EMP NAME: " + this.getEmpName());
+//        System.out.println("EMP ID: " + this.getEmpID());
+//        System.out.println("EMP NAME: " + this.getEmpName());
+//        System.out.println("Rate: " + this.getRatePerPiece());
+//        System.out.println("Total Pieces: " + this.getTotalPiecesFin());
+//        System.out.println("Total Salary: " + this.computeSalary());
+        
+       String res = String.format("\n-----USING DISPLAY -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %f\nTOTAL PIECES FINISHED: %d\nTOTAL SALARY: %f", this.empName, this.empID, this.ratePerPiece, this.totalPiecesFin, this.computeSalary());
+       System.out.println(res);
     }
 
     @Override
     public String toString() {
-        return "EMP Name= " + empName + ", EMP ID= " + empID;
+        return String.format("\n-----USING TO STRING -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %f\nTOTAL PIECES FINISHED: %d\nTOTAL SALARY: %f", this.empName, this.empID, this.ratePerPiece, this.totalPiecesFin, this.computeSalary());
     }
     
     

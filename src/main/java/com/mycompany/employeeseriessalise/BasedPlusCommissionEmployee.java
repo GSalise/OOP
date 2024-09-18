@@ -55,9 +55,8 @@ public class BasedPlusCommissionEmployee {
     }
     
     public void displayBPCEmployee(){
-        System.out.println("EMP ID: " + this.getEmpID());
-        System.out.println("EMP NAME: " + this.getEmpName());
-        System.out.println("EMP Total Sales: " + this.totalSales);
+        String res = String.format("\n-----USING DISPLAY -----\nEMP NAME: %s\nEMP ID: %d\nTOTAL SALES: %.2f\nBASE SALARY: %.2f\nTOTAL COMMISSION: %.2f", this.empName, this.empID, this.totalSales, this.baseSalary, this.computeSalary());
+        System.out.println(res);
     }
     
     
@@ -82,7 +81,7 @@ public class BasedPlusCommissionEmployee {
 
     @Override
     public String toString() {
-        return "EMP Name= " + empName + ", EMP ID=" + empID;
+        return String.format("\n-----USING DISPLAY -----\nEMP NAME: %s\nEMP ID: %d\nTOTAL SALES: %.2f\nBASE SALARY: %.2f\nTOTAL COMMISSION: %.2f", this.empName, this.empID, this.totalSales, this.baseSalary, this.computeSalary());
     }
     
     

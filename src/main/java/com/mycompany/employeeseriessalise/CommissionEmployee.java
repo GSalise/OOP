@@ -73,13 +73,14 @@ public class CommissionEmployee {
     }
     
     public void displayCEmployee(){
-        System.out.println("EMP ID: " + this.getEmpID());
-        System.out.println("EMP NAME: " + this.getEmpName());
+        String res = String.format("\n-----USING DISPLAY -----\nEMP NAME: %s\nEMP ID: %d\nCOMMISSION: %.2f\nTOTAL COMMISSION: %.2f", this.empName, this.empID, this.totalSales, this.computeSalary());
+        System.out.println(res);
+    
     }
     
     @Override
     public String toString() {
-        return "EMP Name= " + empName + ", EMP ID=" + empID;
+        return String.format("\n-----USING TO STRING -----\nEMP NAME: %s\nEMP ID: %d\nTOTAL SALES: %.2f\nTOTAL COMMISSION: %.2f", this.empName, this.empID, this.totalSales, this.computeSalary());
     }
     
     
