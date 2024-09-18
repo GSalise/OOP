@@ -23,6 +23,10 @@ public class PieceWorkerEmployee {
         this.empID = empID;
         this.empName = empName;
     }
+    public PieceWorkerEmployee(String empName, int empID){
+        this.empID = empID;
+        this.empName = empName;
+    }
 
     public int getTotalPiecesFin() {
         return totalPiecesFin;
@@ -76,11 +80,27 @@ public class PieceWorkerEmployee {
         double totalSalary;
         double bonus;        
         bonus = this.totalPiecesFin % 100 == 0 ? this.totalPiecesFin/100 : 1;
-        System.out.println(bonus);
         totalSalary = (this.totalPiecesFin * this.ratePerPiece) + (bonus * 10);
         
         return totalSalary;
     }
+    
+    
+    public void displayHourlyEmployee(){
+        System.out.println("EMP ID: " + this.getEmpID());
+        System.out.println("EMP NAME: " + this.getEmpName());
+    }
+
+    @Override
+    public String toString() {
+        return "EMP Name= " + empName + ", EMP ID= " + empID;
+    }
+    
+    
+    
+    
+    
+  
     
     
     

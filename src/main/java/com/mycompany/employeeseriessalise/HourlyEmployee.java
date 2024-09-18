@@ -24,6 +24,11 @@ public class HourlyEmployee {
         this.empID = empID;
     }
     
+    public HourlyEmployee(String empName, int empID){
+        this.empID = empID;
+        this.empName = empName;
+    }
+    
     
 
     public float getTotalHrsWorked() {

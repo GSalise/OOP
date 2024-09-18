@@ -1,3 +1,5 @@
+com\mycompany\employeeseriessalise\HourlyEmployee.class
+com\mycompany\employeeseriessalise\CommissionEmployee.class
 com\mycompany\employeeseriessalise\PieceWorkerEmployee.class
 com\mycompany\employeeseriessalise\EmployeeSeriesSalise.class
-com\mycompany\employeeseriessalise\HourlyEmployee.class
+com\mycompany\employeeseriessalise\BasedPlusCommissionEmployee.class
