@@ -64,13 +64,13 @@ public class BasedPlusCommissionEmployee {
         double overallSalary = 0;
         
         if(this.totalSales < 10000){
-            overallSalary = this.totalSales + (this.totalSales * .05);
+            overallSalary = this.totalSales * (.05);
         }else if(this.totalSales >= 10000 && this.totalSales < 100000){
-            overallSalary = this.totalSales + (this.totalSales * .10);
+            overallSalary = this.totalSales * (.10);
         }else if(this.totalSales >= 100000 && this.totalSales < 1000000){
-            overallSalary = this.totalSales + (this.totalSales * .20);
+            overallSalary = this.totalSales * (.20);
         }else if(this.totalSales >= 1000000){
-            overallSalary = this.totalSales + (this.totalSales * .30);
+            overallSalary = this.totalSales * (.30);
         }
         
         overallSalary += this.baseSalary;
@@ -81,7 +81,7 @@ public class BasedPlusCommissionEmployee {
 
     @Override
     public String toString() {
-        return String.format("\n-----USING DISPLAY -----\nEMP NAME: %s\nEMP ID: %d\nTOTAL SALES: %.2f\nBASE SALARY: %.2f\nTOTAL COMMISSION: %.2f", this.empName, this.empID, this.totalSales, this.baseSalary, this.computeSalary());
+        return String.format("\n-----USING TO STRING -----\nEMP NAME: %s\nEMP ID: %d\nTOTAL SALES: %.2f\nBASE SALARY: %.2f\nTOTAL COMMISSION: %.2f", this.empName, this.empID, this.totalSales, this.baseSalary, this.computeSalary());
     }
     
     

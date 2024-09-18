@@ -57,13 +57,13 @@ public class CommissionEmployee {
         double totalSalary = 0;
         
         if(this.totalSales < 10000){
-            totalSalary = this.totalSales + (this.totalSales * .05);
+            totalSalary = this.totalSales * (.05);
         }else if(this.totalSales >= 10000 && this.totalSales < 100000){
-            totalSalary = this.totalSales + (this.totalSales * .10);
+            totalSalary = this.totalSales * (.10);
         }else if(this.totalSales >= 100000 && this.totalSales < 1000000){
-            totalSalary = this.totalSales + (this.totalSales * .20);
+            totalSalary = this.totalSales + (.20);
         }else if(this.totalSales >= 1000000){
-            totalSalary = this.totalSales + (this.totalSales * .30);
+            totalSalary = this.totalSales * (.30);
         }
         
         

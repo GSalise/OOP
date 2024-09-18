@@ -29,14 +29,14 @@ public class EmployeeSeriesSalise {
         
         
         System.out.println("Commission");
-        CommissionEmployee emp3 = new CommissionEmployee(9000.0, "Dean", 300);
+        CommissionEmployee emp3 = new CommissionEmployee(10000.0, "Dean", 300);
         System.out.println(emp3.computeSalary());
         emp3.displayCEmployee();
         System.out.println(emp3.toString());
         System.out.println("\n\n\n");
         
         
-        System.out.println("Commission");
+        System.out.println("Based Plus Commission");
         BasedPlusCommissionEmployee emp4 = new BasedPlusCommissionEmployee(10000.0, 9000, "Peteros", 400);
         System.out.println(emp4.computeSalary());
         emp4.displayBPCEmployee();
