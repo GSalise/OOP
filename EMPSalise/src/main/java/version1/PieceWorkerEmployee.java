@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.employeeseriessalise;
+package version1;
 
 /**
  *
@@ -93,13 +93,13 @@ public class PieceWorkerEmployee {
 //        System.out.println("Total Pieces: " + this.getTotalPiecesFin());
 //        System.out.println("Total Salary: " + this.computeSalary());
         
-       String res = String.format("\n-----USING DISPLAY -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %f\nTOTAL PIECES FINISHED: %d\nTOTAL SALARY: %f", this.empName, this.empID, this.ratePerPiece, this.totalPiecesFin, this.computeSalary());
+       String res = String.format("\n-----USING DISPLAY -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %.2f\nTOTAL PIECES FINISHED: %d\nTOTAL SALARY: %.2f", this.empName, this.empID, this.ratePerPiece, this.totalPiecesFin, this.computeSalary());
        System.out.println(res);
     }
 
     @Override
     public String toString() {
-        return String.format("\n-----USING TO STRING -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %f\nTOTAL PIECES FINISHED: %d\nTOTAL SALARY: %f", this.empName, this.empID, this.ratePerPiece, this.totalPiecesFin, this.computeSalary());
+        return String.format("\n-----USING TO STRING -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %.2f\nTOTAL PIECES FINISHED: %d\nTOTAL SALARY: %.2f", this.empName, this.empID, this.ratePerPiece, this.totalPiecesFin, this.computeSalary());
     }
     
     

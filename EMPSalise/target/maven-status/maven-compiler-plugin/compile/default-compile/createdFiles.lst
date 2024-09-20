@@ -1,5 +1,11 @@
-com\mycompany\employeeseriessalise\HourlyEmployee.class
-com\mycompany\employeeseriessalise\CommissionEmployee.class
-com\mycompany\employeeseriessalise\PieceWorkerEmployee.class
-com\mycompany\employeeseriessalise\EmployeeSeriesSalise.class
-com\mycompany\employeeseriessalise\BasedPlusCommissionEmployee.class
+version2/HourlyEmployee.class
+version2/PieceWorkerEmployee.class
+version2/Main.class
+version1/BasedPlusCommissionEmployee.class
+version1/HourlyEmployee.class
+version1/EmployeeSeriesSalise.class
+version2/BasedPlusCommissionEmployee.class
+version2/Employee.class
+version1/PieceWorkerEmployee.class
+version1/CommissionEmployee.class
+version2/CommissionEmployee.class
