@@ -58,7 +58,7 @@ public class BasedPlusCommissionEmployee extends CommissionEmployee{
 
     @Override
     public String toString() {
-        return String.format("\n-----USING DISPLAYver2 -----\nEMP NAME: %s\nEMP ID: %d\nTOTAL SALES: %.2f\nBASE SALARY: %.2f\nTOTAL COMMISSION: %.2f", super.getEmpName(), super.getEmpID(), super.getTotalSales(), this.baseSalary, this.computeSalary());
+        return String.format("\n-----USING DISPLAYver2 -----\nEMP NAME: %s\nEMP ID: %d\nTOTAL SALES: %.2f\nBASE SALARY: %.2f", super.getEmpName(), super.getEmpID(), super.getTotalSales(), this.baseSalary);
     }
     
     

@@ -59,12 +59,28 @@ public class HourlyEmployee extends Employee{
 
     @Override
     public String toString() {
-        return String.format("\n-----USING DISPLAYver2 -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %.2f\nTOTAL HOURS: %.2f\nTOTAL SALARY: %.2f", super.getEmpName(), super.getEmpID(), this.ratePerHour, this.totalHrsWorked, this.computeSalary());
+        return String.format("\n-----USING DISPLAYver2 -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %.2f\nTOTAL HOURS: %.2f", super.getEmpName(), super.getEmpID(), this.ratePerHour, this.totalHrsWorked);
+    }
+
+    public double getRatePerHour() {
+        return ratePerHour;
+    }
+
+    public void setRatePerHour(double ratePerHour) {
+        this.ratePerHour = ratePerHour;
+    }
+
+    public float getTotalHrsWorked() {
+        return totalHrsWorked;
+    }
+
+    public void setTotalHrsWorked(float totalHrsWorked) {
+        this.totalHrsWorked = totalHrsWorked;
     }
     
     
 
-   
+ 
    
    
     

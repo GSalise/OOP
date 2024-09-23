@@ -80,7 +80,7 @@ public class CommissionEmployee {
     
     @Override
     public String toString() {
-        return String.format("\n-----USING TO STRING -----\nEMP NAME: %s\nEMP ID: %d\nTOTAL SALES: %.2f\nTOTAL COMMISSION: %.2f", this.empName, this.empID, this.totalSales, this.computeSalary());
+        return String.format("\n-----USING TO STRING -----\nEMP NAME: %s\nEMP ID: %d\nTOTAL SALES: %.2f", this.empName, this.empID, this.totalSales);
     }
     
     

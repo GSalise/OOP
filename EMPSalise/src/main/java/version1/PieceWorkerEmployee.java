@@ -9,11 +9,12 @@ package version1;
  * @author User
  */
 public class PieceWorkerEmployee {
+
     private int totalPiecesFin;
     private double ratePerPiece;
     private int empID;
     private String empName;
-    
+
     public PieceWorkerEmployee() {
     }
 
@@ -23,7 +24,8 @@ public class PieceWorkerEmployee {
         this.empID = empID;
         this.empName = empName;
     }
-    public PieceWorkerEmployee(String empName, int empID){
+
+    public PieceWorkerEmployee(String empName, int empID) {
         this.empID = empID;
         this.empName = empName;
     }
@@ -59,9 +61,7 @@ public class PieceWorkerEmployee {
     public void setEmpName(String empName) {
         this.empName = empName;
     }
-    
-       
-    
+
 //    PieceWorkerEmployee
 //-totalPiecesFinished:int
 //-ratePerPiece:double
@@ -75,39 +75,30 @@ public class PieceWorkerEmployee {
 //    Employee Name: xxx
 //+toString():String
 // -> similar with display
-    
-    public double computeSalary(){
-        double totalSalary;
-        double bonus;        
-        bonus = this.totalPiecesFin % 100 == 0 ? this.totalPiecesFin/100 : 1;
-        totalSalary = (this.totalPiecesFin * this.ratePerPiece) + (bonus * 10);
-        
-        return totalSalary;
+    public double computeSalary() {
+//        double totalSalary;
+//        double bonus;        
+//        bonus = this.totalPiecesFin % 100 == 0 ? this.totalPiecesFin/100 : 1;
+//        totalSalary = (this.totalPiecesFin * this.ratePerPiece) + (bonus * 10);
+//        
+//        return totalSalary;
+        return this.totalPiecesFin * this.ratePerPiece + this.totalPiecesFin / 100 * 10 * this.ratePerPiece;
     }
-    
-    
-    public void displayHourlyEmployee(){
+
+    public void displayHourlyEmployee() {
 //        System.out.println("EMP ID: " + this.getEmpID());
 //        System.out.println("EMP NAME: " + this.getEmpName());
 //        System.out.println("Rate: " + this.getRatePerPiece());
 //        System.out.println("Total Pieces: " + this.getTotalPiecesFin());
 //        System.out.println("Total Salary: " + this.computeSalary());
-        
-       String res = String.format("\n-----USING DISPLAY -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %.2f\nTOTAL PIECES FINISHED: %d\nTOTAL SALARY: %.2f", this.empName, this.empID, this.ratePerPiece, this.totalPiecesFin, this.computeSalary());
-       System.out.println(res);
+
+        String res = String.format("\n-----USING DISPLAY -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %.2f\nTOTAL PIECES FINISHED: %d\nTOTAL SALARY: %.2f", this.empName, this.empID, this.ratePerPiece, this.totalPiecesFin, this.computeSalary());
+        System.out.println(res);
     }
 
     @Override
     public String toString() {
-        return String.format("\n-----USING TO STRING -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %.2f\nTOTAL PIECES FINISHED: %d\nTOTAL SALARY: %.2f", this.empName, this.empID, this.ratePerPiece, this.totalPiecesFin, this.computeSalary());
+        return String.format("\n-----USING TO STRING -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %.2f\nTOTAL PIECES FINISHED: %d", this.empName, this.empID, this.ratePerPiece, this.totalPiecesFin);
     }
-    
-    
-    
-    
-    
-  
-    
-    
-    
+
 }

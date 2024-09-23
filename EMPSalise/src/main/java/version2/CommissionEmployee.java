@@ -66,7 +66,7 @@ public class CommissionEmployee extends Employee{
 
     @Override
     public String toString() {
-        return String.format("\n-----USING DISPLAYver2 -----\nEMP NAME: %s\nEMP ID: %d\nCOMMISSION: %.2f\nTOTAL COMMISSION: %.2f", super.getEmpName(), super.getEmpID(), this.totalSales, this.computeSalary());
+        return String.format("\n-----USING DISPLAYver2 -----\nEMP NAME: %s\nEMP ID: %d\nCOMMISSION: %.2f", super.getEmpName(), super.getEmpID(), this.totalSales);
     }
     
     

@@ -81,7 +81,15 @@ public class BasedPlusCommissionEmployee {
 
     @Override
     public String toString() {
-        return String.format("\n-----USING TO STRING -----\nEMP NAME: %s\nEMP ID: %d\nTOTAL SALES: %.2f\nBASE SALARY: %.2f\nTOTAL COMMISSION: %.2f", this.empName, this.empID, this.totalSales, this.baseSalary, this.computeSalary());
+        return String.format("\n-----USING TO STRING -----\nEMP NAME: %s\nEMP ID: %d\nTOTAL SALES: %.2f\nBASE SALARY: %.2f", this.empName, this.empID, this.totalSales, this.baseSalary);
+    }
+
+    public double getBaseSalary() {
+        return baseSalary;
+    }
+
+    public void setBaseSalary(double baseSalary) {
+        this.baseSalary = baseSalary;
     }
     
     

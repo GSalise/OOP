@@ -74,7 +74,7 @@ public class PieceWorkerEmployee extends Employee{
 
     @Override
     public String toString() {
-        return String.format("\n-----USING DISPLAYver2 -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %.2f\nTOTAL PIECES FINISHED: %d\nTOTAL SALARY: %.2f", super.getEmpID(), super.getEmpID(), this.ratePerPiece, this.totalPiecesFin, this.computeSalary());
+        return String.format("\n-----USING DISPLAYver2 -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %.2f\nTOTAL PIECES FINISHED: %d", super.getEmpID(), super.getEmpID(), this.ratePerPiece, this.totalPiecesFin);
     }
     
     

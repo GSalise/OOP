@@ -80,7 +80,7 @@ public class HourlyEmployee {
 
     @Override
     public String toString() {
-        return String.format("\n-----USING TO STRING -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %.2f\nTOTAL HOURS: %.2f\nTOTAL SALARY: %.2f", this.empName, this.empID, this.ratePerHour, this.totalHrsWorked, this.computeSalary());
+        return String.format("\n-----USING TO STRING -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %.2f\nTOTAL HOURS: %.2f", this.empName, this.empID, this.ratePerHour, this.totalHrsWorked);
     }
     
     
