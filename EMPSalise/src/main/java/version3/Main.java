@@ -14,8 +14,8 @@ public class Main {
         Employee test = new Employee();
         test.setEmpName("George", "Salise");
         test.setEmpID(999);
-        test.displayEmpName();
-        
+        test.setDates("2004-12-02", "2012-07-09");
+        test.displayEmp();
         
         
     }

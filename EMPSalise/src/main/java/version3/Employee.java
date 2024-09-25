@@ -10,22 +10,26 @@ package version3;
  */
 public class Employee {
     private int empID;
-    Name empName = new Name();
-    
+    Name empName;
+    Date dates;
     
     public Employee(){
         
     }
     
+    public Employee(String fName, String lName, int ID, String dob, String hdate){
+        empName = new Name(fName, lName);
+        dates = new Date(dob, hdate);
+        empID = ID;
+    }
+    
     public Employee(String fName, String lName, int ID){
-        empName.setfName(fName);
-        empName.setlName(lName);
+        empName = new Name(fName, lName);
         empID = ID;
     }
     
     public Employee(String fName, String lName){
-        empName.setfName(fName);
-        empName.setlName(lName);
+        empName = new Name(fName, lName);
     }
 
     public Employee(int empID) {
@@ -41,18 +45,27 @@ public class Employee {
         this.empID = empID;
     }
 
-    public void displayEmpName() {
-        System.out.println(empName.getfName() + " " + empName.getlName());
+    public void displayEmp() {
+        System.out.println(empName.getfName() + " " + empName.getlName() + "\n" + dates.getDob() + " " + dates.getHireDate());
     }
 
-    public Name getEmpName() {
+    public Name getEmpName(){
         return empName;
     }
 
     public void setEmpName(String fName, String lName) {
-        empName.setfName(fName);
-        empName.setlName(lName);
+        empName = new Name(fName, lName);
     }
+
+    public Date getDates() {
+        return dates;
+    }
+
+    public void setDates(String dob, String hdate) {
+        dates = new Date(dob, hdate);
+    }
+    
+    
     
     
     
