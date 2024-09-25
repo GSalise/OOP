@@ -10,4 +10,13 @@ package version3;
  */
 public class Main {
     
+    public static void main(String [] args){
+        Employee test = new Employee();
+        test.setEmpName("George", "Salise");
+        test.setEmpID(999);
+        test.displayEmpName();
+        
+        
+        
+    }
 }
