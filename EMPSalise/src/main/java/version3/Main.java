@@ -21,6 +21,11 @@ public class Main {
         Hourly emp101 = new Hourly(500.0, 8, "George", "Adriane", "Salise", 101, "2004-08-29", "2024-08-29");
         emp101.displayHEmployee();
         System.out.println(emp101.toString());
+        System.out.println("\n\n\n\n");
+        
+        Hourly emp102 = new Hourly(500.0, 9, "George", "Dean", 101, "2004-08-29", "2024-08-29");
+        emp102.displayHEmployee();
+        System.out.println(emp102.toString());
         
     }
 }

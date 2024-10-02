@@ -26,6 +26,12 @@ public class Hourly extends Employee{
         this.rph = rph;
         this.hrsWorked = hrsWorked;
     }
+    
+    public Hourly(double rph, float hrsWorked, String fName, String lName, int ID, String dob, String hdate) {
+        super(fName, lName, ID, dob, hdate);
+        this.rph = rph;
+        this.hrsWorked = hrsWorked;
+    }
 
     public Hourly(String fName, String mName, String lName) {
         super(fName, mName, lName);
@@ -53,13 +59,13 @@ public class Hourly extends Employee{
     }
     
     public void displayHEmployee(){
-       String res = String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s %s %s\nEMP ID: %d\nDOB: %s\nHIRED ON: %s\nRATE: %.2f\nTOTAL HOURS: %.2f\nTOTAL SALARY: %.2f", super.getEmpName().getfName(), super.getEmpName().getmName().charAt(0), super.getEmpName().getlName(), super.getEmpID(), super.getDates().getDob(), super.getDates().getHireDate(), this.rph, this.hrsWorked, this.computeSalary());
+       String res = String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s%s%s %s\nEMP ID: %d\nDOB: %s\nHIRED ON: %s\nRATE: %.2f\nTOTAL HOURS: %.2f\nTOTAL SALARY: %.2f", super.getEmpName().getfName(), ((super.getEmpName().getmName() != null) ? " ": ""), ((super.getEmpName().getmName() != null) ? super.getEmpName().getmName().charAt(0) : ""), super.getEmpName().getlName(), super.getEmpID(), super.getDates().getDob(), super.getDates().getHireDate(), this.rph, this.hrsWorked, this.computeSalary());
        System.out.println(res);
     }
 
     @Override
     public String toString() {
-        return String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s %s %s\nEMP ID: %d\nDOB: %s\nHIRED ON: %s\nRATE: %.2f\nTOTAL HOURS: %.2f\nTOTAL SALARY: %.2f", super.getEmpName().getfName(), super.getEmpName().getmName().charAt(0), super.getEmpName().getlName(), super.getEmpID(), super.getDates().getDob(), super.getDates().getHireDate(), this.rph, this.hrsWorked, this.computeSalary());
+        return String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s%s%s %s\nEMP ID: %d\nDOB: %s\nHIRED ON: %s\nRATE: %.2f\nTOTAL HOURS: %.2f\nTOTAL SALARY: %.2f", super.getEmpName().getfName(), ((super.getEmpName().getmName() != null) ? " ": ""), ((super.getEmpName().getmName() != null) ? super.getEmpName().getmName().charAt(0) : ""), super.getEmpName().getlName(), super.getEmpID(), super.getDates().getDob(), super.getDates().getHireDate(), this.rph, this.hrsWorked, this.computeSalary());
     }
 
     public double getRph() {

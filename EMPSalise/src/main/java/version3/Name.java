@@ -18,6 +18,11 @@ public class Name {
         this.mName = mName;
         this.lName = lName;
     }
+    
+    public Name(String fName, String lName) {
+        this.fName = fName;
+        this.lName = lName;
+    }
 
     public Name() {
     }

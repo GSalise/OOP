@@ -23,13 +23,28 @@ public class Employee {
         empID = ID;
     }
     
+    public Employee(String fName, String lName, int ID, String dob, String hdate){
+        empName = new Name(fName, lName);
+        dates = new Date(dob, hdate);
+        empID = ID;
+    }
+    
     public Employee(String fName, String mName, String lName, int ID){
         empName = new Name(fName, mName, lName);
         empID = ID;
     }
     
+    public Employee(String fName, String lName, int ID){
+        empName = new Name(fName, lName);
+        empID = ID;
+    }
+    
     public Employee(String fName, String mName, String lName){
         empName = new Name(fName, mName, lName);
+    }
+    
+    public Employee(String fName, String lName){
+        empName = new Name(fName, lName);
     }
 
     public Employee(int empID) {
