@@ -4,6 +4,8 @@
  */
 package version3;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author acer
@@ -11,7 +13,9 @@ package version3;
 public class Employee {
     private int empID;
     Name empName;
-    Date dates;
+    //Date dates;
+    private LocalDate dob;
+    private LocalDate hireDate;
     
     public Employee(){
         
@@ -19,13 +23,15 @@ public class Employee {
     
     public Employee(String fName, String mName, String lName, int ID, String dob, String hdate){
         empName = new Name(fName, mName, lName);
-        dates = new Date(dob, hdate);
+        this.dob = LocalDate.parse(dob);
+        this.hireDate = LocalDate.parse(hdate);
         empID = ID;
     }
     
     public Employee(String fName, String lName, int ID, String dob, String hdate){
         empName = new Name(fName, lName);
-        dates = new Date(dob, hdate);
+        this.dob = LocalDate.parse(dob);
+        this.hireDate = LocalDate.parse(hdate);
         empID = ID;
     }
     
@@ -61,7 +67,7 @@ public class Employee {
     }
 
     public void displayEmp() {
-        System.out.println(empName.getfName() + " " + empName.getmName().charAt(0) + ". " + empName.getlName() + "\n" + dates.getDob() + " " + dates.getHireDate());
+        System.out.println(empName.getfName() + " " + empName.getmName().charAt(0) + ". " + empName.getlName() + "\n" + dob + " " + hireDate);
     }
 
     public Name getEmpName(){
@@ -72,12 +78,32 @@ public class Employee {
         empName = new Name(fName, mName, lName);
     }
 
-    public Date getDates() {
-        return dates;
+//    public Date getDates() {
+//        return dates;
+//    }
+
+    public LocalDate getDob() {
+        return dob;
     }
 
-    public void setDates(String dob, String hdate) {
-        dates = new Date(dob, hdate);
+    public LocalDate getHireDate() {
+        return hireDate;
+    }
+    
+    
+    
+
+//    public void setDates(String dob, String hdate) {
+//        this.dob = LocalDate.parse(dob);
+//        this.hireDate = LocalDate.parse(hdate);
+//    }
+
+    public void setDob(String dob) {
+        this.dob = LocalDate.parse(dob);
+    }
+
+    public void setHireDate(String hireDate) {
+        this.hireDate = LocalDate.parse(hireDate);
     }
     
     

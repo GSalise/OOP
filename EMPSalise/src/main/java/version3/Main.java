@@ -14,7 +14,8 @@ public class Main {
         Employee test = new Employee();
         test.setEmpName("George", "Adriane", "Salise");
         test.setEmpID(999);
-        test.setDates("2004-12-02", "2012-07-09");
+        test.setDob("2004-08-29");
+        test.setHireDate("2024-08-29");
         test.displayEmp();
         System.out.println("\n\n\n\n");
         
@@ -22,10 +23,15 @@ public class Main {
         emp101.displayHEmployee();
         System.out.println(emp101.toString());
         System.out.println("\n\n\n\n");
-        
-        Hourly emp102 = new Hourly(500.0, 9, "George", "Dean", 101, "2004-08-29", "2024-08-29");
-        emp102.displayHEmployee();
-        System.out.println(emp102.toString());
+//        
+//        Hourly emp102 = new Hourly(500.0, 9, "George", "Dean", 101, "2004-08-29", "2024-08-29");
+//        emp102.displayHEmployee();
+//        System.out.println(emp102.toString());
+//        System.out.println("\n\n\n\n");
+//        
+//        Hourly emp103 = new Hourly(500.0, 9, "George", "Dean", 101);
+//        emp103.displayHEmployee();
+//        System.out.println(emp103.toString());
         
     }
 }

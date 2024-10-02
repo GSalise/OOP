@@ -54,19 +54,25 @@ public class Hourly extends Employee{
         this.hrsWorked = hrsWorked;
     }
     
+    public Hourly(double rph, float hrsWorked, String fName, String lName, int empID) {
+        super(fName, lName, empID);
+        this.rph = rph;
+        this.hrsWorked = hrsWorked;
+    }
+    
     public double computeSalary(){
         return (hrsWorked <= 40) ? rph * hrsWorked : (rph * hrsWorked) * 1.5;
     }
     
     public void displayHEmployee(){
-       String res = String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s%s%s %s\nEMP ID: %d\nDOB: %s\nHIRED ON: %s\nRATE: %.2f\nTOTAL HOURS: %.2f\nTOTAL SALARY: %.2f", super.getEmpName().getfName(), ((super.getEmpName().getmName() != null) ? " ": ""), ((super.getEmpName().getmName() != null) ? super.getEmpName().getmName().charAt(0) : ""), super.getEmpName().getlName(), super.getEmpID(), super.getDates().getDob(), super.getDates().getHireDate(), this.rph, this.hrsWorked, this.computeSalary());
+       String res = String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s%s%s %s\nEMP ID: %d\nDOB: %s\nHIRED ON: %s\nRATE: %.2f\nTOTAL HOURS: %.2f\nTOTAL SALARY: %.2f", super.getEmpName().getfName(), ((super.getEmpName().getmName() != null) ? " ": ""), ((super.getEmpName().getmName() != null) ? super.getEmpName().getmName().charAt(0) : ""), super.getEmpName().getlName(), super.getEmpID(), super.getDob(), super.getHireDate(), this.rph, this.hrsWorked, this.computeSalary());
        System.out.println(res);
     }
 
-    @Override
-    public String toString() {
-        return String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s%s%s %s\nEMP ID: %d\nDOB: %s\nHIRED ON: %s\nRATE: %.2f\nTOTAL HOURS: %.2f\nTOTAL SALARY: %.2f", super.getEmpName().getfName(), ((super.getEmpName().getmName() != null) ? " ": ""), ((super.getEmpName().getmName() != null) ? super.getEmpName().getmName().charAt(0) : ""), super.getEmpName().getlName(), super.getEmpID(), super.getDates().getDob(), super.getDates().getHireDate(), this.rph, this.hrsWorked, this.computeSalary());
-    }
+//    @Override
+//    public String toString() {
+//        return String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s%s%s %s\nEMP ID: %d\nDOB: %s\nHIRED ON: %s\nRATE: %.2f\nTOTAL HOURS: %.2f\n", super.getEmpName().getfName(), ((super.getEmpName().getmName() != null) ? " ": ""), ((super.getEmpName().getmName() != null) ? super.getEmpName().getmName().charAt(0) : ""), super.getEmpName().getlName(), super.getEmpID(), ((super.getDates()!=null && super.getDates().getDob()!= null) ? super.getDates().getDob() : "no data"), ((super.getDates()!= null && super.getDates().getHireDate()!= null) ? super.getDates().getHireDate(): "no data"), this.rph, this.hrsWorked);
+//    }
 
     public double getRph() {
         return rph;
