@@ -14,13 +14,13 @@ public class Commission extends Employee{
     public Commission() {
     }
 
-    public Commission(double totalS, String fName, String lName, int ID) {
-        super(fName, lName, ID);
+    public Commission(double totalS, String fName, String mName, String lName, int ID) {
+        super(fName, mName, lName, ID);
         this.totalS = totalS;
     }
 
-    public Commission(double totalS, String fName, String lName, int ID, String dob, String hdate) {
-        super(fName, lName, ID, dob, hdate);
+    public Commission(double totalS, String fName, String mName, String lName, int ID, String dob, String hdate) {
+        super(fName, mName, lName, ID, dob, hdate);
         this.totalS = totalS;
     }
 
@@ -29,13 +29,13 @@ public class Commission extends Employee{
         this.totalS = totalS;
     }
 
-    public Commission(double totalS, String fName, String lName) {
-        super(fName, lName);
+    public Commission(double totalS, String fName, String mName, String lName) {
+        super(fName, mName, lName);
         this.totalS = totalS;
     }
 
-    public Commission(String fName, String lName, int ID) {
-        super(fName, lName, ID);
+    public Commission(String fName, String mName, String lName, int ID) {
+        super(fName, mName, lName, ID);
     }
 
     public Commission(double totalS) {

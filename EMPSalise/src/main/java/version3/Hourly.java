@@ -15,20 +15,20 @@ public class Hourly extends Employee{
     public Hourly() {
     }
 
-    public Hourly(double rph, float hrsWorked, String fName, String lName, int ID) {
-        super(fName, lName, ID);
+    public Hourly(double rph, float hrsWorked, String fName, String mName, String lName, int ID) {
+        super(fName, mName, lName, ID);
         this.rph = rph;
         this.hrsWorked = hrsWorked;
     }
 
-    public Hourly(double rph, float hrsWorked, String fName, String lName, int ID, String dob, String hdate) {
-        super(fName, lName, ID, dob, hdate);
+    public Hourly(double rph, float hrsWorked, String fName, String mName, String lName, int ID, String dob, String hdate) {
+        super(fName, mName, lName, ID, dob, hdate);
         this.rph = rph;
         this.hrsWorked = hrsWorked;
     }
 
-    public Hourly(String fName, String lName) {
-        super(fName, lName);
+    public Hourly(String fName, String mName, String lName) {
+        super(fName, mName, lName);
     }
 
     public Hourly(double rph, float hrsWorked) {
@@ -36,8 +36,8 @@ public class Hourly extends Employee{
         this.hrsWorked = hrsWorked;
     }
 
-    public Hourly(double rph, float hrsWorked, String fName, String lName) {
-        super(fName, lName);
+    public Hourly(double rph, float hrsWorked, String fName, String mName, String lName) {
+        super(fName, mName, lName);
         this.rph = rph;
         this.hrsWorked = hrsWorked;
     }
@@ -52,14 +52,14 @@ public class Hourly extends Employee{
         return (hrsWorked <= 40) ? rph * hrsWorked : (rph * hrsWorked) * 1.5;
     }
     
-     public void displayHEmployee(){
-       String res = String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %.2f\nTOTAL HOURS: %.2f\nTOTAL SALARY: %.2f", super.getEmpName(), super.getEmpID(), this.rph, this.hrsWorked, this.computeSalary());
+    public void displayHEmployee(){
+       String res = String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s %s %s\nEMP ID: %d\nDOB: %s\nHIRED ON: %s\nRATE: %.2f\nTOTAL HOURS: %.2f\nTOTAL SALARY: %.2f", super.getEmpName().getfName(), super.getEmpName().getmName().charAt(0), super.getEmpName().getlName(), super.getEmpID(), super.getDates().getDob(), super.getDates().getHireDate(), this.rph, this.hrsWorked, this.computeSalary());
        System.out.println(res);
     }
 
     @Override
     public String toString() {
-        return String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %.2f\nTOTAL HOURS: %.2f", super.getEmpName(), super.getEmpID(), this.rph, this.hrsWorked);
+        return String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s %s %s\nEMP ID: %d\nDOB: %s\nHIRED ON: %s\nRATE: %.2f\nTOTAL HOURS: %.2f\nTOTAL SALARY: %.2f", super.getEmpName().getfName(), super.getEmpName().getmName().charAt(0), super.getEmpName().getlName(), super.getEmpID(), super.getDates().getDob(), super.getDates().getHireDate(), this.rph, this.hrsWorked, this.computeSalary());
     }
 
     public double getRph() {

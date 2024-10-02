@@ -15,20 +15,20 @@ public class PieceWorker extends Employee{
     public PieceWorker() {
     }
     
-    public PieceWorker(int pieceFin, double rpp, String fName, String lName, int ID) {
-        super(fName, lName, ID);
+    public PieceWorker(int pieceFin, double rpp, String fName, String mName, String lName, int ID) {
+        super(fName, mName, lName, ID);
         this.pieceFin = pieceFin;
         this.rpp = rpp;
     }
 
-    public PieceWorker(int pieceFin, double rpp, String fName, String lName, int ID, String dob, String hdate) {
-        super(fName, lName, ID, dob, hdate);
+    public PieceWorker(int pieceFin, double rpp, String fName, String mName, String lName, int ID, String dob, String hdate) {
+        super(fName, mName, lName, ID, dob, hdate);
         this.pieceFin = pieceFin;
         this.rpp = rpp;
     }
 
-    public PieceWorker(int pieceFin, double rpp, String fName, String lName) {
-        super(fName, lName);
+    public PieceWorker(int pieceFin, double rpp, String fName, String mName, String lName) {
+        super(fName, mName, lName);
         this.pieceFin = pieceFin;
         this.rpp = rpp;
     }

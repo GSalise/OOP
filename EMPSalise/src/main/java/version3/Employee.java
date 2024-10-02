@@ -17,19 +17,19 @@ public class Employee {
         
     }
     
-    public Employee(String fName, String lName, int ID, String dob, String hdate){
-        empName = new Name(fName, lName);
+    public Employee(String fName, String mName, String lName, int ID, String dob, String hdate){
+        empName = new Name(fName, mName, lName);
         dates = new Date(dob, hdate);
         empID = ID;
     }
     
-    public Employee(String fName, String lName, int ID){
-        empName = new Name(fName, lName);
+    public Employee(String fName, String mName, String lName, int ID){
+        empName = new Name(fName, mName, lName);
         empID = ID;
     }
     
-    public Employee(String fName, String lName){
-        empName = new Name(fName, lName);
+    public Employee(String fName, String mName, String lName){
+        empName = new Name(fName, mName, lName);
     }
 
     public Employee(int empID) {
@@ -46,15 +46,15 @@ public class Employee {
     }
 
     public void displayEmp() {
-        System.out.println(empName.getfName() + " " + empName.getlName() + "\n" + dates.getDob() + " " + dates.getHireDate());
+        System.out.println(empName.getfName() + " " + empName.getmName().charAt(0) + ". " + empName.getlName() + "\n" + dates.getDob() + " " + dates.getHireDate());
     }
 
     public Name getEmpName(){
         return empName;
     }
 
-    public void setEmpName(String fName, String lName) {
-        empName = new Name(fName, lName);
+    public void setEmpName(String fName, String mName, String lName) {
+        empName = new Name(fName, mName, lName);
     }
 
     public Date getDates() {

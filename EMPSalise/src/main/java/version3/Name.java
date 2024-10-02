@@ -10,10 +10,12 @@ package version3;
  */
 public class Name {
     private String fName;
+    private String mName;
     private String lName;
 
-    public Name(String fName, String lName) {
+    public Name(String fName, String mName, String lName) {
         this.fName = fName;
+        this.mName = mName;
         this.lName = lName;
     }
 
@@ -36,6 +38,15 @@ public class Name {
     public void setlName(String lName) {
         this.lName = lName;
     }
+
+    public String getmName() {
+        return mName;
+    }
+
+    public void setmName(String mName) {
+        this.mName = mName;
+    }
+    
     
     
     

@@ -14,12 +14,12 @@ public class BasedPlusCommission extends Commission{
     public BasedPlusCommission() {
     }
 
-    public BasedPlusCommission(String fName, String lName, int ID) {
-        super(fName, lName, ID);
+    public BasedPlusCommission(String fName, String mName, String lName, int ID) {
+        super(fName, mName, lName, ID);
     }
 
-    public BasedPlusCommission(double bs, double totalS, String fName, String lName, int ID, String dob, String hdate) {
-        super(totalS, fName, lName, ID, dob, hdate);
+    public BasedPlusCommission(double bs, double totalS, String fName, String mName, String lName, int ID, String dob, String hdate) {
+        super(totalS, fName, mName, lName, ID, dob, hdate);
         this.bs = bs;
     }
 
@@ -28,8 +28,8 @@ public class BasedPlusCommission extends Commission{
         this.bs = bs;
     }
 
-    public BasedPlusCommission(double bs, double totalS, String fName, String lName, int ID) {
-        super(totalS, fName, lName, ID);
+    public BasedPlusCommission(double bs, double totalS, String fName, String mName, String lName, int ID) {
+        super(totalS, fName, mName, lName, ID);
         this.bs = bs;
     }
 
