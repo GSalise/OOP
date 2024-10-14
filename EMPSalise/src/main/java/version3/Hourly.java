@@ -65,14 +65,35 @@ public class Hourly extends Employee{
     }
     
     public void displayHEmployee(){
-       String res = String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s%s%s %s\nEMP ID: %d\nDOB: %s\nHIRED ON: %s\nRATE: %.2f\nTOTAL HOURS: %.2f\nTOTAL SALARY: %.2f", super.getEmpName().getfName(), ((super.getEmpName().getmName() != null) ? " ": ""), ((super.getEmpName().getmName() != null) ? super.getEmpName().getmName().charAt(0) : ""), super.getEmpName().getlName(), super.getEmpID(), super.getDob(), super.getHireDate(), this.rph, this.hrsWorked, this.computeSalary());
+       String res = String.format("""
+                                  
+                                  -----USING DISPLAYver3 -----
+                                  EMP NAME: %s
+                                  EMP ID: %d
+                                  DOB: %s
+                                  HIRED ON: %s
+                                  RATE: %.2f
+                                  TOTAL HOURS: %.2f
+                                  TOTAL SALARY: %.2f""",
+               super.getEmpName().toString(), super.getEmpID(), super.getDob(),
+               super.getHireDate(), this.rph, this.hrsWorked, this.computeSalary());
        System.out.println(res);
     }
 
-//    @Override
-//    public String toString() {
-//        return String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s%s%s %s\nEMP ID: %d\nDOB: %s\nHIRED ON: %s\nRATE: %.2f\nTOTAL HOURS: %.2f\n", super.getEmpName().getfName(), ((super.getEmpName().getmName() != null) ? " ": ""), ((super.getEmpName().getmName() != null) ? super.getEmpName().getmName().charAt(0) : ""), super.getEmpName().getlName(), super.getEmpID(), ((super.getDates()!=null && super.getDates().getDob()!= null) ? super.getDates().getDob() : "no data"), ((super.getDates()!= null && super.getDates().getHireDate()!= null) ? super.getDates().getHireDate(): "no data"), this.rph, this.hrsWorked);
-//    }
+    @Override
+    public String toString() {
+       return String.format("""
+                                  
+                                  -----USING DISPLAYver3 -----
+                                  EMP NAME: %s
+                                  EMP ID: %d
+                                  DOB: %s
+                                  HIRED ON: %s
+                                  RATE: %.2f
+                                  TOTAL HOURS: %.2f""",
+               super.getEmpName().toString(), super.getEmpID(), super.getDob(),
+               super.getHireDate(), this.rph, this.hrsWorked);
+    }
 
     public double getRph() {
         return rph;

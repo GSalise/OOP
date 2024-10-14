@@ -52,6 +52,16 @@ public class Name {
         this.mName = mName;
     }
     
+    public void displayName(){
+        String res = String.format("%s%s %s", this.fName, (this.mName != null) ? " " + this.mName.charAt(0) : "", this.lName);
+        System.out.println(res);
+    }
+    
+    @Override
+    public String toString(){
+        return String.format("%s%s %s", this.fName, (this.mName != null) ? " " + this.mName.charAt(0) : "", this.lName);
+    }
+    
     
     
     

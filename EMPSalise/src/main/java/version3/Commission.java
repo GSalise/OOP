@@ -38,6 +38,13 @@ public class Commission extends Employee{
         super(fName, mName, lName, ID);
     }
 
+    public Commission(double totalS, String fName, String lName, int ID) {
+        super(fName, lName, ID);
+        this.totalS = totalS;
+    }
+    
+    
+
     public Commission(double totalS) {
         this.totalS = totalS;
     }
@@ -55,13 +62,32 @@ public class Commission extends Employee{
     }
     
     public void displayCEmployee(){
-        String res = String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s\nEMP ID: %d\nCOMMISSION: %.2f\nTOTAL COMMISSION: %.2f", super.getEmpName(), super.getEmpID(), this.totalS, this.computeSalary());
-        System.out.println(res);
+       String res = String.format("""
+                                  
+                                  -----USING DISPLAYver3 -----
+                                  EMP NAME: %s
+                                  EMP ID: %d
+                                  DOB: %s
+                                  HIRED ON: %s
+                                  TOTAL SALES: %.2f
+                                  TOTAL SALARY: %.2f""",
+               super.getEmpName().toString(), super.getEmpID(), super.getDob(), 
+               super.getHireDate(), this.totalS, this.computeSalary());
+       System.out.println(res);
     }
 
     @Override
     public String toString() {
-        return String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s\nEMP ID: %d\nCOMMISSION: %.2f", super.getEmpName(), super.getEmpID(), this.totalS);
+        return String.format("""
+                             
+                             -----USING TOSTRINGver3 -----
+                             EMP NAME: %s
+                             EMP ID: %d
+                             DOB: %s
+                             HIRED ON: %s
+                             TOTAL SALES: %.2f"""
+               ,super.getEmpName().toString(), super.getEmpID(), super.getDob(), 
+               super.getHireDate(), this.totalS);
     }
 
     public double getTotalS() {

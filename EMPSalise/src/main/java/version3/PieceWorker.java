@@ -43,6 +43,14 @@ public class PieceWorker extends Employee{
         this.pieceFin = pieceFin;
         this.rpp = rpp;
     }
+
+    public PieceWorker(int pieceFin, double rpp, String fName, String lName, int ID) {
+        super(fName, lName, ID);
+        this.pieceFin = pieceFin;
+        this.rpp = rpp;
+    }
+    
+    
     
     public double computeSalary(){
         double totalSalary;
@@ -54,13 +62,34 @@ public class PieceWorker extends Employee{
     }
     
     public void displayPieceWorkerEmployee(){
-       String res = String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %.2f\nTOTAL PIECES FINISHED: %d\nTOTAL SALARY: %.2f", super.getEmpID(), super.getEmpID(), this.rpp, this.pieceFin, this.computeSalary());
+       String res = String.format("""
+                                  
+                                  -----USING DISPLAYver3 -----
+                                  EMP NAME: %s
+                                  EMP ID: %d
+                                  DOB: %s
+                                  HIRED ON: %s
+                                  PIECES FINISHED: %d
+                                  RATE PER PIECE: %.2f
+                                  TOTAL SALARY: %.2f""", 
+               super.getEmpName().toString(), super.getEmpID(), super.getDob(), 
+               super.getHireDate(), this.pieceFin, this.rpp, this.computeSalary());
        System.out.println(res);
     }
 
     @Override
     public String toString() {
-        return String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s\nEMP ID: %d\nRATE: %.2f\nTOTAL PIECES FINISHED: %d", super.getEmpID(), super.getEmpID(), this.rpp, this.pieceFin);
+        return String.format("""
+                             
+                             -----USING TOSTRINGver3 -----
+                             EMP NAME: %s
+                             EMP ID: %d
+                             DOB: %s
+                             HIRED ON: %s
+                             PIECES FINISHED: %d
+                             RATE PER PIECE: %.2f""",
+                super.getEmpName().toString(), super.getEmpID(), super.getDob(), 
+               super.getHireDate(), this.pieceFin, this.rpp);
     }
 
     public int getPieceFin() {

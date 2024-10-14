@@ -11,8 +11,7 @@ package version3;
 public class Main {
     
     public static void main(String [] args){
-        Employee test = new Employee();
-        test.setEmpName("George", "Adriane", "Salise");
+        Employee test = new Employee("George", "Salise");
         test.setEmpID(999);
         test.setDob("2004-08-29");
         test.setHireDate("2024-08-29");
@@ -23,15 +22,24 @@ public class Main {
         emp101.displayHEmployee();
         System.out.println(emp101.toString());
         System.out.println("\n\n\n\n");
-//        
-//        Hourly emp102 = new Hourly(500.0, 9, "George", "Dean", 101, "2004-08-29", "2024-08-29");
-//        emp102.displayHEmployee();
-//        System.out.println(emp102.toString());
-//        System.out.println("\n\n\n\n");
-//        
-//        Hourly emp103 = new Hourly(500.0, 9, "George", "Dean", 101);
-//        emp103.displayHEmployee();
-//        System.out.println(emp103.toString());
+        
+        Hourly emp102 = new Hourly(500.0, 9, "George", "Dean", 101, "2004-08-29", "2024-08-29");
+        emp102.displayHEmployee();
+        System.out.println(emp102.toString());
+        System.out.println("\n\n\n\n");
+        
+        PieceWorker testing0 = new PieceWorker(100, 9.5, "PieceWorker", "Employee", 111);
+        testing0.displayPieceWorkerEmployee();
+        System.out.println(testing0.toString());
+        
+        Commission testing1 = new Commission(9000.0, "Commission", "Employee", 222);
+        testing1.displayCEmployee();
+        System.out.println(testing1.toString());
+        
+        BasedPlusCommission testing2 = new BasedPlusCommission(15000.00, 79856.00, "BasedPlusCommission", "Employee", 333);
+        testing2.displayBPCEmployee();
+        System.out.println(testing2.toString());
+        
         
     }
 }

@@ -13,7 +13,6 @@ import java.time.LocalDate;
 public class Employee {
     private int empID;
     Name empName;
-    //Date dates;
     private LocalDate dob;
     private LocalDate hireDate;
     
@@ -67,7 +66,7 @@ public class Employee {
     }
 
     public void displayEmp() {
-        System.out.println(empName.getfName() + " " + empName.getmName().charAt(0) + ". " + empName.getlName() + "\n" + dob + " " + hireDate);
+        System.out.println(this.empName.toString());
     }
 
     public Name getEmpName(){

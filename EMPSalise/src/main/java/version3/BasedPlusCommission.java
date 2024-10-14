@@ -33,6 +33,13 @@ public class BasedPlusCommission extends Commission{
         this.bs = bs;
     }
 
+    public BasedPlusCommission(double bs, double totalS, String fName, String lName, int ID) {
+        super(totalS, fName, lName, ID);
+        this.bs = bs;
+    }
+    
+    
+
     public BasedPlusCommission(double bs) {
         this.bs = bs;
     }
@@ -43,13 +50,35 @@ public class BasedPlusCommission extends Commission{
     }
     
     public void displayBPCEmployee(){
-        String res = String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s\nEMP ID: %d\nTOTAL SALES: %.2f\nBASE SALARY: %.2f\nTOTAL COMMISSION: %.2f", super.getEmpName(), super.getEmpID(), super.getTotalS(), this.bs, this.computeSalary());
-        System.out.println(res);
+        String res = String.format("""
+                                  
+                                  -----USING DISPLAYver3 -----
+                                  EMP NAME: %s
+                                  EMP ID: %d
+                                  DOB: %s
+                                  HIRED ON: %s
+                                  BASE SALARY: %.2f
+                                  TOTAL SALES: %.2f
+                                  TOTAL SALARY: %.2f""",
+               super.getEmpName().toString(), super.getEmpID(), super.getDob(), 
+               super.getHireDate(), this.bs, super.getTotalS(), this.computeSalary());
+       System.out.println(res);
     }
 
     @Override
     public String toString() {
-        return String.format("\n-----USING DISPLAYver3 -----\nEMP NAME: %s\nEMP ID: %d\nTOTAL SALES: %.2f\nBASE SALARY: %.2f", super.getEmpName(), super.getEmpID(), super.getTotalS(), this.bs);
+        return String.format("""
+                                  
+                                  -----USING TOSTRINGver3 -----
+                                  EMP NAME: %s
+                                  EMP ID: %d
+                                  DOB: %s
+                                  HIRED ON: %s
+                                  BASE SALARY: %.2f
+                                  TOTAL SALES: %.2f
+                                  TOTAL SALARY: %.2f""",
+               super.getEmpName().toString(), super.getEmpID(), super.getDob(), 
+               super.getHireDate(), this.bs, super.getTotalS(), this.computeSalary());
     }
     
     
