@@ -1,8 +1,10 @@
-version3\BasedPlusCommission.class
-version3\Name.class
 version3\Date.class
 version3\Employee.class
+version4\EmployeeRoster.class
+version4\Main.class
+version3\Commission.class
+version3\BasedPlusCommission.class
+version3\Name.class
 version3\Hourly.class
 version3\PieceWorker.class
 version3\Main.class
-version3\Commission.class
