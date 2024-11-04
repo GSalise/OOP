@@ -13,16 +13,16 @@ public class Main {
         EmployeeRoster a = new EmployeeRoster(10);
         
         Hourly emp101 = new Hourly(500.0, 8, "George", "Adriane", "Salise", 101, "2004-08-29", "2024-08-29");
-        Hourly emp102 = new Hourly(500.0, 8, "George", "Adriane", "Salise", 999, "2004-08-29", "2024-08-29");
-        Hourly emp103 = new Hourly(500.0, 8, "George", "Adriane", "Salise", 888, "2004-08-29", "2024-08-29");
+        Hourly emp102 = new Hourly(500.0, 8, "Chonyue", "Vigil", "Sui", 999, "2004-08-29", "2024-08-29");
+        Hourly emp103 = new Hourly(500.0, 8, "Angelina", "Mumu", "Sargon", 888, "2004-08-29", "2024-08-29");
         
-        PieceWorker emp104 = new PieceWorker(100, 9.5, "PieceWorker", "Employee", 111);
-        PieceWorker emp105 = new PieceWorker(100, 9.5, "PieceWorker", "Employee", 312);
-        PieceWorker emp106 = new PieceWorker(100, 9.5, "PieceWorker", "Employee", 879);  
+        PieceWorker emp104 = new PieceWorker(100, 9.5, "PieceWorker1", "Employee1", 111);
+        PieceWorker emp105 = new PieceWorker(100, 9.5, "PieceWorker2", "Employee2", 312);
+        PieceWorker emp106 = new PieceWorker(100, 9.5, "PieceWorker3", "Employee3", 879);  
         
-        Commission emp107 = new Commission(9000.0, "Commission", "Employee", 222);
-        Commission emp108 = new Commission(9000.0, "Commission", "Employee", 676);
-        Commission emp109 = new Commission(9000.0, "Commission", "Employee", 777);
+        Commission emp107 = new Commission(9000.0, "Commission1", "Employee1", 222);
+        Commission emp108 = new Commission(9000.0, "Commission2", "Employee2", 676);
+        Commission emp109 = new Commission(9000.0, "Commission3", "Employee3", 777);
 
         BasedPlusCommission emp110 = new BasedPlusCommission(15000.00, 79856.00, "BasedPlusCommission", "Employee", 333);
         
@@ -59,6 +59,16 @@ public class Main {
         System.out.println(a.countPWE());
         System.out.println(a.countCE());
         System.out.println(a.countBPCE());
+        
+        
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        
+        a.displayHE();
+        a.displayPWE();
+        a.displayCE();
+        a.displayBPCE();
     
     }
 }

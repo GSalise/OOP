@@ -104,6 +104,50 @@ public class EmployeeRoster {
         return num;
     }
     
+    public void displayHE(){
+        System.out.println("\nHourly Employees in the current roster: ");
+        for(int i = 0; i < this.count; i++){
+            if(this.getEmpList()[i] instanceof Hourly){
+                System.out.print("- ");
+                this.getEmpList()[i].displayEmp();
+            }
+        }
+    }
+    
+    public void displayPWE(){
+        System.out.println("\nPieceWorker Employees in the current roster: ");
+        for(int i = 0; i < this.count; i++){
+            if(this.getEmpList()[i] instanceof PieceWorker){
+                System.out.print("- ");
+                this.getEmpList()[i].displayEmp();
+            }
+        }
+    }    
+    
+    public void displayCE(){
+        System.out.println("\nCommission Employees in the current roster: ");
+        for(int i = 0; i < this.count; i++){
+            if(this.getEmpList()[i] instanceof Commission && !(this.getEmpList()[i] instanceof BasedPlusCommission)){
+                System.out.print("- ");
+                this.getEmpList()[i].displayEmp();
+            }
+        }
+    }
+    
+     public void displayBPCE(){
+        System.out.println("\nBased Plus Commission Employees in the current roster: ");
+        for(int i = 0; i < this.count; i++){
+            if(this.getEmpList()[i] instanceof BasedPlusCommission){
+                System.out.print("- ");
+                this.getEmpList()[i].displayEmp();
+            }
+        }
+    }
+     
+    public void displayAllEmployee(){
+        System.out.println("\nList of Employees in the current roster\n");
+        
+    }
     
     
     

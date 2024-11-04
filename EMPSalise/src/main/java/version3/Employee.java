@@ -77,9 +77,6 @@ public class Employee {
         empName = new Name(fName, mName, lName);
     }
 
-//    public Date getDates() {
-//        return dates;
-//    }
 
     public LocalDate getDob() {
         return dob;
@@ -89,13 +86,6 @@ public class Employee {
         return hireDate;
     }
     
-    
-    
-
-//    public void setDates(String dob, String hdate) {
-//        this.dob = LocalDate.parse(dob);
-//        this.hireDate = LocalDate.parse(hdate);
-//    }
 
     public void setDob(String dob) {
         this.dob = LocalDate.parse(dob);
