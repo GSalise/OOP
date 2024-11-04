@@ -11,26 +11,31 @@ import version3.*;
 public class Main {
     public static void main(String [] args){
         EmployeeRoster a = new EmployeeRoster(10);
+        
         Hourly emp101 = new Hourly(500.0, 8, "George", "Adriane", "Salise", 101, "2004-08-29", "2024-08-29");
-        BasedPlusCommission testing2 = new BasedPlusCommission(15000.00, 79856.00, "BasedPlusCommission", "Employee", 333);
-        Commission testing1 = new Commission(9000.0, "Commission", "Employee", 222);
-        PieceWorker testing0 = new PieceWorker(100, 9.5, "PieceWorker", "Employee", 111);
-        PieceWorker testing9 = new PieceWorker(100, 9.5, "PieceWorker", "Employee", 312);
-        PieceWorker testing8 = new PieceWorker(100, 9.5, "PieceWorker", "Employee", 879);
-        Commission testing7 = new Commission(9000.0, "Commission", "Employee", 676);
-        Commission testing6 = new Commission(9000.0, "Commission", "Employee", 777);
-        Hourly testing5 = new Hourly(500.0, 8, "George", "Adriane", "Salise", 999, "2004-08-29", "2024-08-29");
-        Hourly testing4 = new Hourly(500.0, 8, "George", "Adriane", "Salise", 888, "2004-08-29", "2024-08-29");
+        Hourly emp102 = new Hourly(500.0, 8, "George", "Adriane", "Salise", 999, "2004-08-29", "2024-08-29");
+        Hourly emp103 = new Hourly(500.0, 8, "George", "Adriane", "Salise", 888, "2004-08-29", "2024-08-29");
+        
+        PieceWorker emp104 = new PieceWorker(100, 9.5, "PieceWorker", "Employee", 111);
+        PieceWorker emp105 = new PieceWorker(100, 9.5, "PieceWorker", "Employee", 312);
+        PieceWorker emp106 = new PieceWorker(100, 9.5, "PieceWorker", "Employee", 879);  
+        
+        Commission emp107 = new Commission(9000.0, "Commission", "Employee", 222);
+        Commission emp108 = new Commission(9000.0, "Commission", "Employee", 676);
+        Commission emp109 = new Commission(9000.0, "Commission", "Employee", 777);
 
+        BasedPlusCommission emp110 = new BasedPlusCommission(15000.00, 79856.00, "BasedPlusCommission", "Employee", 333);
+        
         a.addEmployee(emp101);
-        a.addEmployee(testing2);
-        a.addEmployee(testing1);
-        a.addEmployee(testing9);
-        a.addEmployee(testing8);
-        a.addEmployee(testing7);
-        a.addEmployee(testing6);
-        a.addEmployee(testing5);
-        a.addEmployee(testing4);
+        a.addEmployee(emp102);
+        a.addEmployee(emp103);
+        a.addEmployee(emp104);
+        a.addEmployee(emp105);
+        a.addEmployee(emp106);
+        a.addEmployee(emp107);
+        a.addEmployee(emp108);
+        a.addEmployee(emp109);
+        a.addEmployee(emp110);
 
         System.out.println();
         System.out.println();
@@ -51,6 +56,9 @@ public class Main {
         System.out.println();
         
         System.out.println(a.countHE());
+        System.out.println(a.countPWE());
+        System.out.println(a.countCE());
+        System.out.println(a.countBPCE());
     
     }
 }
