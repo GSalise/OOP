@@ -147,6 +147,29 @@ public class EmployeeRoster {
     public void displayAllEmployee(){
         System.out.println("\nList of Employees in the current roster\n");
         
+        String[] columns = {"ID", "Name", "DOB", "Hire Date", "Salary", "Employee Type"};
+        
+        StringBuilder sb = new StringBuilder();
+//        sb.append("-".repeat(10 * columns.length));
+//        sb.append("\n");
+        
+        for(int i = 0; i < columns.length; i++){
+            sb.append(String.format("%-5s", "|"));
+            sb.append(String.format(columns[i]));
+            sb.append(String.format("%-5s", ""));
+            if(i == columns.length - 1){
+                sb.append("|");
+            }
+        }
+        
+        sb.append("\n\n\n");
+        System.out.println(sb.toString());
+        
+        
+        
+        
+        
+        
     }
     
     

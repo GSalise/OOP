@@ -69,6 +69,8 @@ public class Main {
         a.displayPWE();
         a.displayCE();
         a.displayBPCE();
+        
+        a.displayAllEmployee();
     
     }
 }
