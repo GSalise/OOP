@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package version4;
+package version5;
 import version3.*;
 /**
  *
@@ -10,7 +10,7 @@ import version3.*;
  */
 public class Main {
     public static void main(String [] args){
-        EmployeeRoster a = new EmployeeRoster(10);
+        EmployeeRosterV2 a = new EmployeeRosterV2();
         
         Hourly emp101 = new Hourly(500.0, 8, "George", "Adriane", "Salise", 101, "2004-08-29", "2024-08-29");
         Hourly emp102 = new Hourly(500.0, 8, "Chonyue", "Vigil", "Sui", 999, "2004-08-29", "2024-09-29");
@@ -40,15 +40,15 @@ public class Main {
         System.out.println();
         System.out.println();
         System.out.println();
-        for(int i = 0; i < a.getCount(); i++){
-            System.out.println(a.getEmpList()[i].toString());
+        for(int i = 0; i < a.getEmpList().size(); i++){
+            System.out.println(a.getEmpList().get(i).toString());
         }
         System.out.println();
         System.out.println();
         System.out.println();
         a.removeEmployee(222);
-        for(int i = 0; i < a.getCount(); i++){
-            System.out.println(a.getEmpList()[i].toString());
+        for(int i = 0; i < a.getEmpList().size(); i++){
+            System.out.println(a.getEmpList().get(i).toString());
         }
         
         System.out.println();
@@ -74,3 +74,4 @@ public class Main {
     
     }
 }
+

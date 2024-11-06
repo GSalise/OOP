@@ -147,27 +147,33 @@ public class EmployeeRoster {
     public void displayAllEmployee(){
         System.out.println("\nList of Employees in the current roster\n");
         
-        String[] columns = {"ID", "Name", "DOB", "Hire Date", "Salary", "Employee Type"};
-        
-        StringBuilder sb = new StringBuilder();
-//        sb.append("-".repeat(10 * columns.length));
-//        sb.append("\n");
-        
-        for(int i = 0; i < columns.length; i++){
-            sb.append(String.format("%-5s", "|"));
-            sb.append(String.format(columns[i]));
-            sb.append(String.format("%-5s", ""));
-            if(i == columns.length - 1){
-                sb.append("|");
+        System.out.println(String.format("%-5s | %-30s | %-14s | %-14s | %-12s | %-12s", "EMP ID", "Name", "Hire Date", "Date of Birth","Salary", "EMP Type"));
+        for(int i = 0; i < this.count; i++){
+            double salary = 0.0;
+            if(empList[i] instanceof Hourly){
+                Hourly a = (Hourly)empList[i];
+                salary = a.computeSalary();
             }
+            
+            if(empList[i] instanceof PieceWorker){
+                PieceWorker a = (PieceWorker)empList[i];
+                salary = a.computeSalary();
+            }
+            
+            if(empList[i] instanceof Commission && !(empList[i] instanceof BasedPlusCommission)){
+                Commission a = (Commission)empList[i];
+                salary = a.computeSalary();
+            }
+      
+            if(empList[i] instanceof BasedPlusCommission){
+                BasedPlusCommission a = (BasedPlusCommission)empList[i];
+                salary = a.computeSalary();
+            }
+            
+            empList[i].getClass().getSimpleName();
+            String res = String.format("%-6d | %-30s | %-14s | %-14s | %-12.2f | %-12s", empList[i].getEmpID(), empList[i].getEmpName(), empList[i].getHireDate(), empList[i].getDob(), salary, empList[i].getClass().getSimpleName());
+            System.out.println(res);
         }
-        
-        sb.append("\n\n\n");
-        System.out.println(sb.toString());
-        
-        
-        
-        
         
         
     }
